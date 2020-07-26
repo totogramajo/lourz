@@ -377,7 +377,7 @@
                     <div class="title-sub-container">
                         <p class="title-sub">Servicios</p>
                     </div>
-                    <h2 class="title-main">Te ayudamos</h2>
+                    <h2 class="title-main">¿Qué hacemos?</h2>
                 </div>
 
                 <div class="row">
@@ -425,9 +425,9 @@
             <div class="container">
                 <div class="one-title">
                     <div class="title-sub-container">
-                        <p class="title-sub">FutureAgency</p>
+                        <p class="title-sub">clientes</p>
                     </div>
-                    <h2 class="title-main">Trabajos Realizados</h2>
+                    <h2 class="title-main">Más recientes</h2>
                 </div>
 
                 <div class="custom-container">
@@ -572,7 +572,7 @@
                                     <div class="form-box">
                                         <h3>Déjanos tu comentario</h3>
                                         <form id="contact-form" class="form" method="post" action="contact.php"
-                                            data-toggle="validator">
+                                            data-toggle="validator" data-netlify="true">
                                             <div class="messages"></div>
                                             <div class="input__wrap controls">
                                                 <div class="form-group">
@@ -606,74 +606,97 @@
                                                     <div class="help-block with-errors"></div>
                                                 </div>
 
-                                                <div class="image-zoom" data-dsn="parallax">
+                                                <!-- <div class="image-zoom" data-dsn="parallax">
                                                     <button>Enviar Mensaje</button>
+                                                </div> -->
+
+                                                <div class="popup" id="popup-1">
+                                                    <div class="overlay"></div>
+                                                    <div id="che">
+                                                        <div class="content">
+                                                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                                            <h1 id="solicitud" style="color: black;">¡Enviado!
+                                                            </h1>
+                                                            <p style="color: black; padding-bottom: 15px;">Muchas
+                                                                gracias por completar el formulario,
+                                                                nuestros
+                                                                representantes
+                                                                estarán contactándose con usted a la brevedad.
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
+                                                <input class="business-btn " type="submit" value="Enviar"
+                                                    onclick="togglePopup()"></button>
                                             </div>
-                                        </form>
                                     </div>
+
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
 
 
-                    <footer class="footer">
-                        <div class="container">
-                            <div class="footer-links p-relative">
-                                <div class="row">
-                                    <div class="col-md-3 dsn-col-footer">
-                                        <div class="footer-block">
-                                            <div class="footer-logo">
-                                                <a href=""><img src="assets/img/future.img/lourz1.png" alt=""></a>
-                                            </div>
-
-                                            <div class="footer-social">
-
-                                                <ul>
-                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                    </li>
-                                                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                                    <li><a href="#"><i class="fab fa-instagram"></i></a>
-                                                    </li>
-                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-links p-relative">
+                        <div class="row">
+                            <div class="col-md-3 dsn-col-footer">
+                                <div class="footer-block">
+                                    <div class="footer-logo">
+                                        <a href=""><img src="assets/img/future.img/lourz1.png" alt=""></a>
                                     </div>
 
-                                    <div class="col-md-3 dsn-col-footer">
-                                        <div class="footer-block col-menu">
-                                            <h4 class="footer-title">Página</h4>
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="#">Portfolio</a>
-                                                    </li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">News</a></li>
-                                                    <li><a href=".contact">Contact</a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
+                                    <div class="footer-social">
 
-                                    <div class="col-md-3 dsn-col-footer">
-                                        <div class="footer-block col-contact">
-                                            <h4 class="footer-title">Contact</h4>
-                                            <p><strong>T</strong> <span>:</span> +001 225 3351</p>
-                                            <p><strong>F</strong> <span>:</span>+001 225 3351</p>
-                                            <p class="over-hidden"><strong>E</strong> <span>:</span><a
-                                                    class="link-hover" data-hover-text="info@dsngrid.com"
-                                                    href="#">info@lourz.com</a>
-                                            </p>
-                                        </div>
-                                    </div>
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
 
-                                    <!-- <div class="col-md-3 dsn-col-footer">
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 dsn-col-footer">
+                                <div class="footer-block col-menu">
+                                    <h4 class="footer-title">Página</h4>
+                                    <nav>
+                                        <ul>
+                                            <li><a href="#">Portfolio</a>
+                                            </li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">News</a></li>
+                                            <li><a href=".contact">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 dsn-col-footer">
+                                <div class="footer-block col-contact">
+                                    <h4 class="footer-title">Contact</h4>
+                                    <p><strong>T</strong> <span>:</span> +001 225 3351</p>
+                                    <p><strong>F</strong> <span>:</span>+001 225 3351</p>
+                                    <p class="over-hidden"><strong>E</strong> <span>:</span><a class="link-hover"
+                                            data-hover-text="info@dsngrid.com" href="#">info@lourz.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-3 dsn-col-footer">
                                         <div class="col-address">
                                             <h4 class="footer-title">Address</h4>
 
@@ -682,54 +705,54 @@
                                                 Egypt</p>
                                         </div>
                                     </div> -->
-                                </div>
-                            </div>
-
-                            <div class="copyright">
-                                <div class="text-center">
-                                    <p>© 2020 Lourz Digital Agency</p>
-                                    <div class="copright-text over-hidden">Designed by <a class="link-hover"
-                                            data-hover-text="DSN Grid" href="#" target="_blank">Lourz Agency</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                </main>
-
-                <!-- Wait Loader -->
-                <div class="wait-loader">
-                    <div class="loader-inner">
-                        <div class="loader-circle">
-                            <div class="loader-layer"></div>
                         </div>
                     </div>
-                </div>
-                <!-- // Wait Loader -->
 
-
-                <!-- cursor -->
-                <div class="cursor">
-
-                    <div class="cursor-helper cursor-view">
-                        <span>VIEW</span>
+                    <div class="copyright">
+                        <div class="text-center">
+                            <p>© 2020 Lourz Digital Agency</p>
+                            <div class="copright-text over-hidden">Designed by <a class="link-hover"
+                                    data-hover-text="DSN Grid" href="#" target="_blank">Lourz Agency</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="cursor-helper cursor-close">
-                        <span>Close</span>
-                    </div>
-
-                    <div class="cursor-helper cursor-link"></div>
                 </div>
-                <!-- End cursor -->
+            </footer>
+        </div>
+        </main>
+
+        <!-- Wait Loader -->
+        <div class="wait-loader">
+            <div class="loader-inner">
+                <div class="loader-circle">
+                    <div class="loader-layer"></div>
+                </div>
+            </div>
+        </div>
+        <!-- // Wait Loader -->
 
 
-                <!-- Optional JavaScript -->
-                <script src="assets/js/jquery-3.1.1.min.js"></script>
-                <script src="assets/js/plugins.js"></script>
-                <script src="assets/js/dsn-grid.js"></script>
-                <script src="assets/js/custom.js"></script>
+        <!-- cursor -->
+        <div class="cursor">
+
+            <div class="cursor-helper cursor-view">
+                <span>VIEW</span>
+            </div>
+
+            <div class="cursor-helper cursor-close">
+                <span>Close</span>
+            </div>
+
+            <div class="cursor-helper cursor-link"></div>
+        </div>
+        <!-- End cursor -->
+
+
+        <!-- Optional JavaScript -->
+        <script src="assets/js/jquery-3.1.1.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/dsn-grid.js"></script>
+        <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
